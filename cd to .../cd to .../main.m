@@ -33,8 +33,11 @@ int main(int argc, const char * argv[]) {
             selected = false;
         }
         
-        if ([[target kind] isEqualToString:@"Alias"]){
-            target = (FinderItem*)[(FinderAliasFile*)target originalItem];
+        for (FinderAliasFile *item in [(FinderContainer *)[target container] aliasFiles]) {
+            if ([[item URL] isEqual:[target URL]]) {
+                target = (FinderItem*)[(FinderAliasFile*)target originalItem];
+                break;
+            }
         }
         
         NSString* fileUrl = [target URL];
