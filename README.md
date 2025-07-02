@@ -1,43 +1,28 @@
-## cd to... [![Latest Release](https://img.shields.io/github/release/jbtule/cdto.svg)](https://github.com/jbtule/cdto/releases/latest)
-<img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
+## cd to... [![Latest Release](https://img.shields.io/github/release/Dwarven/cdto.svg)](https://github.com/Dwarven/cdto/releases/latest)
+<img src="https://raw.github.com/Dwarven/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
-Finder Toolbar app to open the current directory in the Terminal.
+Finder Toolbar app to open the current directory in the [iTerm.app](https://iterm2.com).
 
  * It's written in objective-c, and uses the scripting bridge so it's *fast*.
  * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `zsh`.
 
 By Jay Tuley
-https://github.com/jbtule/cdto
+https://github.com/Dwarven/cdto
 
 ### Usage:
 
-Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
+Download [Latest cdto.zip](https://github.com/Dwarven/cdto/releases/latest)
 
 
 To install "cd to ....app" copy to your Applications folder, and then from the applications folder ⌘ drag it into the Finder toolbar or drag from another finder window to toolbar being customized.
 
 To use, just click on the new button and instantly opens a new terminal window.
 
-### Settings
-
-To turn on feature that identifies automatically opened  Terminal windows, and closes them when using *cd to*.
-
-```bash
-defaults write name.tuley.jay.cd-to cdto-close-default-window -bool true
-```
-
-To change the window scheme for Terminal Windows from default.
-
-_Eg. if you wanted cd to windows to be "Red Sands"_
-
-```bash
-defaults write name.tuley.jay.cd-to cdto-new-window-setting -string "Red Sands"
-```
-
-
-
 
 ### Changes:
+
+Version 3.2.0
+ * [iTerm.app](https://iterm2.com) only supported, no plugins
 
 Version 3.1.3
  * Universal Binary for Apple Silicon and Intel
