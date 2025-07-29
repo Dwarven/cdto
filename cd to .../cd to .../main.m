@@ -33,7 +33,9 @@ int main(int argc, const char * argv[]) {
             selected = false;
         }
         
-        if ([[target kind] isEqualToString:@"Alias"]){
+        NSDictionary* itemProperties = [target properties];
+        NSString* fileType = [itemProperties objectForKey:@"fileType"];
+        if ([fileType isEqualToString: @"fdrp"] || [fileType isEqualToString: @"alis"]){
             target = (FinderItem*)[(FinderAliasFile*)target originalItem];
         }
         
