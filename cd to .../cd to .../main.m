@@ -34,9 +34,9 @@ int main(int argc, const char * argv[]) {
         }
         
         NSDictionary* itemProperties = [target properties];
-        NSString* fileType = [itemProperties objectForKey:@"fileType"];
-        if ([fileType isKindOfClass:[NSString class]] && ([fileType isEqualToString: @"fdrp"] || [fileType isEqualToString: @"alis"])){
-            target = (FinderItem*)[(FinderAliasFile*)target originalItem];
+        id originalItem = [itemProperties objectForKey:@"originalItem"];
+        if (originalItem != nil && originalItem != [NSNull null]){
+            target = originalItem;
         }
         
         NSString* fileUrl = [target URL];
